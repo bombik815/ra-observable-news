@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #e4e4e4;
+  padding-top: 1px;
+  padding-bottom: 20px;
+}
+
+.btn {
+  line-height: 30px;
+  text-align: center;
+  background-color: #006eff21;
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 180px;
+  height: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.list-news {
+  list-style: none;
+}
+
+.item-news {
+  width: 90%;
+  background-color: white;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 3px;
+}
+
+.news-header {
+  display: flex;
+  margin: 10px 0;
+}
+
+.news-header > img {
+  width: 64px;
+  height: 64px;
+  margin-right: 10px;
+}
+
+.news-header-title {
+  align-self: center;
+}
+
+.header-time {
+  color: #808080a3;
+}
+
+.main-text {
+  margin-bottom: 10px;
+}
+
+.main-text > a {
+text-decoration: none;
+}
+
+.news-footer {
+  display: flex;
+  border-top: 1px solid #80808066;
+  margin-top: 20px;
+}
+.footer-likes, .footer-comments, .footer-reposts, .footer-views {
+  display: flex;
+  margin: 10px 0;
+}
+
+span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+}
+
+.footer-likes > span {
+ background-image: url(../images/like.png);
+}
+
+.footer-comments > span {
+ background-image: url(../images/comment.png);
+}
+
+.footer-reposts > span {
+ background-image: url(../images/repost.png);
+}
+
+.footer-views {
+  margin-left: auto;
+}
+.footer-views > span {
+ background-image: url(../images/view.png);
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+}
+.loader {
+  color: #ffffff;
+  font-size: 11px;
+  text-indent: -99999em;
+  margin: 155px auto;
+  position: relative;
+  width: 10em;
+  height: 10em;
+  box-shadow: inset 0 0 0 1em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  content: '';
+}
+.loader:before {
+  width: 5.2em;
+  height: 10.2em;
+  background: #e4e4e4;
+  border-radius: 10.2em 0 0 10.2em;
+  top: -0.1em;
+  left: -0.1em;
+  -webkit-transform-origin: 5.1em 5.1em;
+  transform-origin: 5.1em 5.1em;
+  -webkit-animation: load2 2s infinite ease 1.5s;
+  animation: load2 2s infinite ease 1.5s;
+}
+.loader:after {
+  width: 5.2em;
+  height: 10.2em;
+  background: #e4e4e4;
+  border-radius: 0 10.2em 10.2em 0;
+  top: -0.1em;
+  left: 4.9em;
+  -webkit-transform-origin: 0.1em 5.1em;
+  transform-origin: 0.1em 5.1em;
+  -webkit-animation: load2 2s infinite ease;
+  animation: load2 2s infinite ease;
+}
+@-webkit-keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+.loader-btn,
+.loader-btn:before,
+.loader-btn:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  bottom: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+.loader-btn {
+  color: #006eff21;
+  font-size: 8px;
+  margin: auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader-btn:before,
+.loader-btn:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.loader-btn:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader-btn:after {
+  left: 3.5em;
+}
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
